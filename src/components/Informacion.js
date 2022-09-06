@@ -3,7 +3,7 @@ import React from "react";
 const Informacion = () => {
   return (
     <div>
-      <div className="container">
+      <div className="container mb-5 mt-5">
         <div className="row">
           <div className="col">
             <h5>Información para COVID-19</h5>

@@ -3,7 +3,7 @@ import React from "react";
 const Acordeon = () => {
   return (
     <div>
-      <div class="accordion" id="accordionExample">
+      <div class="accordion mt-5 mb-5" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header collapsed" id="headingOne">
             <button

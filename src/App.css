@@ -7,3 +7,13 @@
   background-color: var(--color-amasun);
   width: 100%;
 }
+
+.header {
+  background-image: "./assets/images/imageOne.png";
+  height: 30em;
+  width: 30em;
+}
+
+.image-carrusel {
+  height: 50vh;
+}

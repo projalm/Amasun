@@ -6,22 +6,14 @@ import Informacion from "../components/Informacion";
 const Reserva = () => {
   return (
     <div>
-      <div
-        id="carouselExampleSlidesOnly"
-        className="carousel slide tamano"
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img
-              src={process.env.PUBLIC_URL + "/assets/images/imageOne.png"}
-              className="d-block w-100 tamano"
-              alt="aqui va la imagen"
-            />
-          </div>
-        </div>
+      <div>
+        <img
+          className="mt-5 w-100 h-100"
+          src={process.env.PUBLIC_URL + "/assets/images/imageOne.png"}
+          alt=""
+        />
       </div>
-      <div className="container">
+      <div className="container mt-3 mb-5">
         <select
           className="form-select-lg mt-5"
           aria-label="Default select example"
@@ -71,8 +63,13 @@ const Reserva = () => {
             <div className="container text-start">
               <h3>Avistamiento de delfines en el Río Amazonas</h3>
               <p>Cusco, Peru</p>
-              <del>S/130</del>
-              <strong>S/130</strong>
+              <div>
+                <del>S/130</del>
+              </div>
+              <div>
+                <strong>S/130</strong>
+              </div>
+
               <div className="row">
                 <div className="col">
                   <strong>Tarifa por persona</strong>

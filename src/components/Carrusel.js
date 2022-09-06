@@ -8,7 +8,7 @@ const Carrusel = () => {
         className="carousel slide"
         data-bs-ride="true"
       >
-        <div className="carousel-indicators">
+        <div className="carousel-indicators ">
           <button
             type="button"
             data-bs-target="#carouselExampleIndicators"
@@ -34,21 +34,21 @@ const Carrusel = () => {
           <div className="carousel-item active">
             <img
               src={process.env.PUBLIC_URL + "/assets/images/imageOne.png"}
-              className="d-block w-100"
+              className="d-block w-100 rounded image-carrusel"
               alt="..."
             />
           </div>
           <div className="carousel-item">
             <img
               src={process.env.PUBLIC_URL + "/assets/images/imageOne.png"}
-              className="d-block w-100"
+              className="d-block w-100 rounded"
               alt="..."
             />
           </div>
           <div className="carousel-item">
             <img
               src={process.env.PUBLIC_URL + "/assets/images/imageOne.png"}
-              className="d-block w-100"
+              className="d-block w-100 rounded"
               alt="..."
             />
           </div>

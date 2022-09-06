@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <div>
       <nav className="navbar bg-light fixed-top">
-        <div className="container-fluid">
+        <div className="container">
           <a className="navbar-brand" href="#">
             Amasun
           </a>
