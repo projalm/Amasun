@@ -17,3 +17,16 @@
 .image-carrusel {
   height: 50vh;
 }
+
+.shadow-box {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.none-type {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.title-footer {
+  color: #DDAF4A;
+}

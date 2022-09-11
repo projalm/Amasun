@@ -59,10 +59,10 @@ const Reserva = () => {
           <div className="col">
             <Carrusel></Carrusel>
           </div>
-          <div className="col">
-            <div className="container text-start">
+          <div className="col ">
+            <div className="container text-start shadow-box" style={{height: "250px", padding: "40px", borderRadius: "20px"}}>
               <h3>Avistamiento de delfines en el Río Amazonas</h3>
-              <p>Cusco, Peru</p>
+              <p style={{color:'#557B4D'}}>Cusco, Peru</p>
               <div>
                 <del>S/130</del>
               </div>
@@ -71,7 +71,7 @@ const Reserva = () => {
               </div>
 
               <div className="row">
-                <div className="col">
+                <div className="col" style={{backgroundColor: 'rgba(237, 47, 89, 0.2)', paddingTop:'7px', width: '10px', color:'#ED2F59', borderRadius:"20px", marginTop:'5px'}}>
                   <strong>Tarifa por persona</strong>
                 </div>
                 <div className="col">
