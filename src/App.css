@@ -8,14 +8,14 @@
   width: 100%;
 }
 
-.header {
-  background-image: "./assets/images/imageOne.png";
+/* .header {
   height: 30em;
   width: 30em;
-}
+} */
 
 .image-carrusel {
   height: 50vh;
+  z-index: 0;
 }
 
 .shadow-box {
@@ -28,5 +28,76 @@
 }
 
 .title-footer {
-  color: #DDAF4A;
+  color: #ddaf4a;
+}
+
+.espace-line-footer a {
+  margin-bottom: 5px;
+}
+
+.footer-brand {
+  display: flex;
+  /* justify-content: end; */
+  border-top: 1px solid white;
+}
+
+.input-class {
+  height: 40px;
+  width: 100%;
+
+  margin-right: 10px;
+  border-radius: 5px;
+  border-style: none;
+  border: 1px solid gray;
+}
+
+.check-reserve {
+  /* margin-left: 300px;
+  margin-right: 300px; */
+  border-radius: 20px;
+  width: 60%;
+  margin-left: 200px;
+}
+
+.bote-zone {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.button-reserve {
+  width: 90%;
+  padding: 5px;
+  border-radius: 5px;
+  border-style: none;
+  background-color: #ed2f59;
+  color: #ffffff;
+  text-align: center;
+}
+
+.form-custom {
+  margin-left: 200px;
+}
+
+.payment-set {
+  border: 1px solid grey;
+  height: 60px;
+  padding-top: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  /* width: 10px; */
+}
+/* 
+.bote-name {
+  margin-top: 200px;
+  z-index: 1;
+} */
+
+.container-reserva-input {
+  padding-right: 200px;
+  padding-left: 300px;
+  height: 100px;
+  z-index: 1;
 }

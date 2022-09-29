@@ -6,7 +6,7 @@ const Informacion = () => {
       <div className="container mb-5 mt-5">
         <div className="row">
           <div className="col">
-            <h5>Información para COVID-19</h5>
+            <h5>Informacion para COVID-19</h5>
             <p>
               Informate mas sobre nuestro Protocolos COVID-19 donde encontraras
               todo lo necesario para viajar con seguridad en nuestros tours y
@@ -25,7 +25,7 @@ const Informacion = () => {
                     aria-expanded="false"
                     aria-controls="collapseDos"
                   >
-                    Accordion Item #2
+                    Preguntas frecuentes
                   </button>
                 </h2>
                 <div
@@ -57,7 +57,7 @@ const Informacion = () => {
                     aria-expanded="false"
                     aria-controls="collapseTres"
                   >
-                    Accordion Item #3
+                    Preguntas frecuentes
                   </button>
                 </h2>
                 <div

@@ -5,7 +5,7 @@ const Acordeon = () => {
     <div>
       <div class="accordion mt-5 mb-5" id="accordionExample">
         <div class="accordion-item">
-          <h2 class="accordion-header collapsed" id="headingOne" >
+          <h2 class="accordion-header collapsed" id="headingOne">
             <button
               class="accordion-button"
               type="button"
@@ -13,9 +13,9 @@ const Acordeon = () => {
               data-bs-target="#collapseOne"
               aria-expanded="false"
               aria-controls="collapseOne"
-              style={{backgroundColor: '#ED2F59', color: '#FFFFFF'}}
+              style={{ backgroundColor: "#ED2F59", color: "#FFFFFF" }}
             >
-              Accordion Item 1
+              Sobre el tour
             </button>
           </h2>
           <div
@@ -45,9 +45,9 @@ const Acordeon = () => {
               data-bs-target="#collapseTwo"
               aria-expanded="false"
               aria-controls="collapseTwo"
-              style={{backgroundColor: '#A8CF45', color: '#FFFFFF'}}
+              style={{ backgroundColor: "#A8CF45", color: "#FFFFFF" }}
             >
-              Accordion Item #2
+              Incluye
             </button>
           </h2>
           <div
@@ -77,9 +77,9 @@ const Acordeon = () => {
               data-bs-target="#collapseThree"
               aria-expanded="false"
               aria-controls="collapseThree"
-              style={{backgroundColor: '#557B4D', color: '#FFFFFF'}}
+              style={{ backgroundColor: "#557B4D", color: "#FFFFFF" }}
             >
-              Accordion Item #3
+              Recomendaciones
             </button>
           </h2>
           <div

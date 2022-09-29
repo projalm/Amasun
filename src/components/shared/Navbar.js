@@ -6,7 +6,14 @@ const Navbar = () => {
       <nav className="navbar bg-light fixed-top">
         <div className="container">
           <a className="navbar-brand" href="#">
-            Amasun
+          <img
+                  src={process.env.PUBLIC_URL + "/assets/icons/logo(1).svg"}
+                  style={{
+                    height: "50px",
+                    width: '250px', color: "white"
+                  }}
+                  alt="..."
+                />
           </a>
           <button
             className="navbar-toggler"
