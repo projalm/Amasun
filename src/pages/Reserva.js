@@ -1,16 +1,45 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Carrusel from "../components/Carrusel";
 import Acordeon from "../components/Acordeon";
 import Informacion from "../components/Informacion";
 import { Link, useHistory } from "react-router-dom";
+import axios from "axios";
 
-const Reserva = () => {
+const Reserva = (props) => {
   const [hora, setHora] = useState("");
   const [adulto, setAdulto] = useState("");
   const [nino, setNino] = useState("");
   const [bote, setBote] = useState("0");
   const [fecha, setFecha] = useState("");
+  const [allBotes, setAllBotes] = useState([]);
+  const [optionBoats, setOptionBoats] = useState([]);
 
+  useEffect(() => {
+    const obtenerBoter = async () => {
+      const url =
+        "https://amasun.satelital.org/api/v1/departures?date=2022/09/25&time=14:00:00";
+
+      const configHeaders = {
+        headers: {
+          ContentType: "application/json",
+          Accept: "application/json",
+          Authorization: "Bearer mwIpmBWyBSvzLkco5v0bmJGHLhgMYXBXYK3conAC",
+        },
+      };
+
+      const result = await axios.get(url, configHeaders);
+      setAllBotes(result.data.data);
+    };
+    obtenerBoter();
+  }, []);
+
+  let options = [];
+
+  for (let i = 0; i < allBotes.length; i++) {
+    options.push(allBotes[i].boat.name);
+  }
+
+  console.log(allBotes);
   const data = [
     {
       id: 1,
@@ -45,6 +74,8 @@ const Reserva = () => {
 
   let totalAdulto = data[bote].precioAdulto * adulto;
   let totalNino = data[bote].precioNino * nino;
+
+  console.log(props);
   const buscar = () => {
     let element = document.getElementById("sinreserva");
     let element2 = document.getElementById("conreserva");
@@ -85,7 +116,7 @@ const Reserva = () => {
         </label> */}
         <div className="col">
           <div>
-            <label for="bote" class="form-label">
+            <label for="bote" className="form-label">
               Bote
             </label>
           </div>
@@ -100,15 +131,14 @@ const Reserva = () => {
             name="bote"
             onClick={oninput}
           >
-            <option value={0}>Selecciona bote</option>
-            <option value={0}>Bote1 </option>
-            <option value={1}>Bote2</option>
-            <option value={2}>Bote3</option>
+            {options.map((element, index) => {
+              return <option value={index}>{element}</option>;
+            })}
           </select>
         </div>
         <div className="col">
           <div>
-            <label for="bote" class="form-label ms-2">
+            <label for="bote" className="form-label ms-2">
               Fecha de reserva
             </label>
           </div>
@@ -126,7 +156,7 @@ const Reserva = () => {
         </div>
         <div className="col">
           <div>
-            <label for="bote" class="form-label ms-2">
+            <label for="bote" className="form-label ms-2">
               Hora de salida
             </label>
           </div>
@@ -146,8 +176,8 @@ const Reserva = () => {
         </div>
         <div className="col">
           <div>
-            <label for="bote" class="form-label ms-2">
-              Niños
+            <label for="bote" className="form-label ms-2">
+              Asientos
             </label>
           </div>
           <input
@@ -156,7 +186,7 @@ const Reserva = () => {
             id="ninos"
             name="ninos"
             min="0"
-            placeholder="Niños"
+            placeholder="Asientos"
             max="100"
             onClick={oninput}
             onChange={(event) => setNino(event.currentTarget.value)}
@@ -164,8 +194,8 @@ const Reserva = () => {
         </div>
         <div className="col">
           <div>
-            <label for="bote" class="form-label ms-2">
-              Adutos
+            <label for="bote" className="form-label ms-2">
+              Niños de 3 a 8 años
             </label>
           </div>
           <input
@@ -173,7 +203,7 @@ const Reserva = () => {
             type="number"
             id="adultos"
             name="adultos"
-            placeholder="Adultos"
+            placeholder="Niños"
             onClick={oninput}
             min="0"
             max="100"
@@ -204,7 +234,7 @@ const Reserva = () => {
                 value=""
                 aria-label="..."
               />
-              <label class="form-check-label ms-1" for="flexCheckDefault">
+              <label className="form-check-label ms-1" for="flexCheckDefault">
                 Asientos ocupados({data[bote].reservedSits})
               </label>
             </div>
@@ -216,7 +246,7 @@ const Reserva = () => {
                 value=""
                 aria-label="..."
               />
-              <label class="form-check-label ms-1" for="flexCheckDefault">
+              <label className="form-check-label ms-1" for="flexCheckDefault">
                 Asientos disponibles({12 - data[bote].reservedSits})
               </label>
             </div>
