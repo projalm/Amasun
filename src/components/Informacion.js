@@ -14,11 +14,11 @@ const Informacion = () => {
             </p>
           </div>
           <div className="col">
-            <div class="accordion" id="accordionExampleDos">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingDos">
+            <div className="accordion" id="accordionExampleDos">
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="headingDos">
                   <button
-                    class="accordion-button"
+                    className="accordion-button"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseDos"
@@ -30,11 +30,11 @@ const Informacion = () => {
                 </h2>
                 <div
                   id="collapseDos"
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                   aria-labelledby="headingDos"
                   data-bs-parent="#accordionExampleDos"
                 >
-                  <div class="accordion-body">
+                  <div className="accordion-body">
                     <strong>This is the second item's accordion body.</strong>{" "}
                     It is hidden by default, until the collapse plugin adds the
                     appropriate classes that we use to style each element. These
@@ -47,10 +47,10 @@ const Informacion = () => {
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTres">
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="headingTres">
                   <button
-                    class="accordion-button collapsed"
+                    className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseTres"
@@ -62,11 +62,11 @@ const Informacion = () => {
                 </h2>
                 <div
                   id="collapseTres"
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                   aria-labelledby="headingTres"
                   data-bs-parent="#accordionExampleDos"
                 >
-                  <div class="accordion-body">
+                  <div className="accordion-body">
                     <strong>This is the third item's accordion body.</strong> It
                     is hidden by default, until the collapse plugin adds the
                     appropriate classes that we use to style each element. These

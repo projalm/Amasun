@@ -61,6 +61,7 @@
 
 .bote-zone {
   display: flex;
+  margin-top: 140px;
 }
 
 .hidden {
@@ -96,8 +97,7 @@
 } */
 
 .container-reserva-input {
-  padding-right: 200px;
-  padding-left: 300px;
+  /* padding-right: 200px;
+  padding-left: 300px; */
   height: 100px;
-  z-index: 1;
 }
